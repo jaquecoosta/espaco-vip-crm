@@ -1,0 +1,12 @@
+{
+  "name": "espaco-vip-crm",
+  "version": "1.0.0",
+  "description": "CRM do Espaço VIP - Gestão de Eventos e Buffet",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'ok'"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.0"
+  }
+}
