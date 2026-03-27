@@ -19,8 +19,6 @@
   --radius:10px;--radius-lg:14px;
 }
 body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark);min-height:100vh;font-size:14px}
-
-/* HEADER */
 .header{background:var(--dark);padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:60px;border-bottom:2px solid var(--orange);position:sticky;top:0;z-index:50}
 .brand-name{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:#fff}
 .brand-sub{font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
@@ -28,8 +26,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .sync-badge:hover{background:var(--teal);color:#fff}
 .sync-badge.syncing{animation:pulse 1s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:1rem 1.5rem 0}
 .stat{background:var(--white);border:.5px solid var(--border);border-radius:var(--radius);padding:.85rem 1rem;position:relative;overflow:hidden}
 .stat::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
@@ -37,17 +33,11 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .stat.s-g::before{background:var(--gold)}.stat.s-gr::before{background:var(--green)}.stat.s-r::before{background:var(--red)}
 .stat-num{font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:700;color:var(--dark)}
 .stat-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:1px}
-
-/* TABS */
 .tabs{display:flex;padding:0 1.5rem;border-bottom:.5px solid var(--border);background:var(--white)}
 .tab{padding:.65rem 1.25rem;font-size:13px;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;font-weight:500;white-space:nowrap}
 .tab.active{color:var(--orange);border-bottom-color:var(--orange)}
-
-/* MAIN GRID */
 .main-grid{display:grid;grid-template-columns:360px 1fr;min-height:calc(100vh - 180px)}
 @media(max-width:900px){.main-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
-
-/* FORM PANEL */
 .form-panel{background:var(--white);border-right:.5px solid var(--border);padding:1.1rem;overflow-y:auto}
 .sec{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin:1rem 0 .5rem;padding-bottom:.4rem;border-bottom:.5px solid var(--border)}
 .sec:first-child{margin-top:0}
@@ -57,8 +47,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .field textarea{resize:vertical;min-height:70px;line-height:1.5}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);background:var(--white)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-
-/* TAGS */
 .tag-wrap{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
 .tag{padding:3px 9px;border-radius:20px;border:.5px solid var(--border);font-size:11px;cursor:pointer;transition:all .15s;color:var(--mid);background:var(--surface)}
 .tag.active{background:var(--orange);border-color:var(--orange-dark);color:#fff;font-weight:500}
@@ -67,14 +55,10 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .stag.ac{background:var(--teal-light);border-color:var(--teal);color:var(--teal-dark);font-weight:500}
 .stag.ar{background:var(--dark2);border-color:var(--dark);color:#fff;font-weight:500}
 .stag.ax{background:var(--red-bg);border-color:var(--red);color:var(--red);font-weight:500}
-
-/* FOTO */
 .photo-upload{border:.5px dashed var(--border);border-radius:8px;padding:.75rem;text-align:center;cursor:pointer;transition:border-color .2s;position:relative;overflow:hidden;background:var(--surface)}
 .photo-upload:hover{border-color:var(--teal)}
 .photo-preview{width:100%;height:80px;object-fit:cover;border-radius:6px;display:none}
 .photo-placeholder{font-size:11px;color:var(--muted)}
-
-/* PARCELAS */
 .parcela-row{display:grid;grid-template-columns:1fr 1fr auto auto;gap:6px;align-items:center;margin-bottom:5px}
 .parcela-row input{padding:6px 8px;border:.5px solid var(--border);border-radius:6px;font-size:12px;font-family:'Poppins',sans-serif;color:var(--dark);background:var(--surface)}
 .parcela-row input:focus{outline:none;border-color:var(--teal)}
@@ -85,17 +69,13 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .btn-rm-p:hover{color:var(--red)}
 .btn-add-parcela{width:100%;padding:6px;background:none;border:.5px dashed var(--border);border-radius:6px;font-size:11px;color:var(--muted);cursor:pointer;transition:all .15s;margin-top:3px;font-family:'Poppins',sans-serif}
 .btn-add-parcela:hover{border-color:var(--teal);color:var(--teal)}
-
 .fin-preview{background:var(--orange-light);border:.5px solid var(--orange);border-radius:8px;padding:.55rem .85rem;display:flex;justify-content:space-between;align-items:center;margin-top:.4rem}
 .fin-preview-lbl{font-size:11px;color:var(--orange-dark);font-weight:500}
 .fin-preview-val{font-family:'Poppins',sans-serif;font-size:.9rem;font-weight:700;color:var(--orange-dark)}
-
 .btn-add{width:100%;padding:10px;background:var(--orange);color:#fff;border:none;border-radius:8px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:600;cursor:pointer;margin-top:.65rem;transition:background .2s}
 .btn-add:hover{background:var(--orange-dark)}
 .btn-add:active{transform:scale(.98)}
 .btn-add:disabled{opacity:.6;cursor:not-allowed}
-
-/* LIST */
 .list-panel{padding:1.1rem;overflow-y:auto}
 .list-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;gap:8px}
 .search-input{padding:7px 11px;border:.5px solid var(--border);border-radius:7px;font-size:13px;color:var(--dark);background:var(--white);width:190px;font-family:'Poppins',sans-serif}
@@ -103,8 +83,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .filter-row{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:.75rem}
 .ftab{padding:4px 11px;border-radius:20px;border:.5px solid var(--border);font-size:11px;cursor:pointer;background:var(--white);color:var(--mid);transition:all .15s;font-weight:500}
 .ftab.active{background:var(--dark);border-color:var(--dark);color:#fff}
-
-/* LEAD CARD */
 .leads-list{display:flex;flex-direction:column;gap:8px}
 .lead-card{background:var(--white);border:.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .2s}
 .lead-card:hover{border-color:var(--teal)}
@@ -127,7 +105,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .sb-r{background:var(--dark2);color:#fff}
 .sb-x{background:var(--red-bg);color:var(--red)}
 .wa-badge{background:#E8F5E9;color:#1B5E20;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:500}
-
 .lc-notas{margin-top:.6rem;padding:.5rem .7rem;background:var(--surface);border-radius:6px;border-left:3px solid var(--gold);font-size:12px;color:var(--mid);line-height:1.5;white-space:pre-line}
 .lc-parcelas{margin-top:.6rem;padding-top:.6rem;border-top:.5px solid var(--border)}
 .parcelas-titulo{font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.4rem}
@@ -136,7 +113,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .dot-pago{background:var(--teal)}.dot-pend{background:var(--orange)}
 .prog-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:5px}
 .prog-fill{height:100%;border-radius:2px;transition:width .4s}
-
 .lc-actions{display:flex;gap:5px;align-items:center;margin-top:.6rem;padding-top:.6rem;border-top:.5px solid var(--border);flex-wrap:wrap}
 .abtn{padding:5px 9px;border-radius:6px;border:none;font-size:11px;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:3px;font-family:'Poppins',sans-serif;transition:opacity .2s}
 .abtn:hover{opacity:.82}
@@ -145,8 +121,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .btn-del{background:var(--surface);color:var(--muted);border:.5px solid var(--border);margin-left:auto}
 .btn-del:hover{background:var(--red-bg);border-color:var(--red);color:var(--red);opacity:1}
 .date-pill{font-size:11px;color:var(--mid);padding:4px 9px;border-radius:6px;background:var(--surface);border:.5px solid var(--border)}
-
-/* RELATÓRIO */
 .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.5rem}
 .rel-card{background:var(--white);border:.5px solid var(--border);border-radius:var(--radius);padding:.85rem 1rem}
 .rel-card-val{font-family:'Poppins',sans-serif;font-size:1.3rem;font-weight:700}
@@ -158,8 +132,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .rel-table th{text-align:left;font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;padding:.5rem .75rem;border-bottom:.5px solid var(--border)}
 .rel-table td{padding:.6rem .75rem;border-bottom:.5px solid var(--border)}
 .rel-table tr:hover td{background:var(--surface)}
-
-/* CALENDÁRIO */
 .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
 .cal-nav button{background:none;border:.5px solid var(--border);border-radius:6px;padding:4px 12px;cursor:pointer;color:var(--mid);font-size:12px;font-family:'Poppins',sans-serif}
 .cal-nav button:hover{border-color:var(--teal);color:var(--teal)}
@@ -171,32 +143,21 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
 .cal-day.today{border-color:var(--teal);background:var(--teal-light)}
 .cal-day-n{font-weight:500;margin-bottom:2px;color:var(--dark)}
 .cal-dot{font-size:9px;background:var(--orange);color:#fff;border-radius:3px;padding:1px 4px;margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-
-/* LOADING */
 .loading{text-align:center;padding:3rem;color:var(--muted)}
 .spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--orange);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto .75rem}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* TOAST */
 .toast{position:fixed;bottom:16px;right:16px;background:var(--dark);color:#fff;padding:9px 16px;border-radius:8px;font-size:12px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:200;border-left:3px solid var(--teal)}
 .toast.show{opacity:1}
 </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <div class="header">
   <div style="display:flex;align-items:center;gap:12px">
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-      <!-- Círculo fundo rosa claro -->
       <circle cx="22" cy="24" r="19" fill="#EFE6E6"/>
-      <!-- Letra E (laranja) - quadrado com canto arredondado esquerdo -->
       <path d="M11 15 Q11 13 13 13 L26 13 L26 31 L13 31 Q11 31 11 29 Z" fill="#E8621A"/>
-      <!-- Letra V (teal) - triângulo diagonal cobrindo metade direita -->
       <path d="M13 13 L33 13 Q35 13 35 15 L35 29 Q35 31 33 31 L26 31 Z" fill="#2DB8A0"/>
-      <!-- Entalhe do E (laranja por cima do teal) -->
       <rect x="14" y="20" width="9" height="4" rx="1" fill="#E8621A"/>
-      <!-- Coroa dourada -->
       <path d="M16 12 L16 8 L19 11 L22 7 L25 11 L28 8 L28 12 Z" fill="#F5A800"/>
       <rect x="16" y="11.5" width="12" height="2" rx="0.5" fill="#F5A800"/>
     </svg>
@@ -207,8 +168,6 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
   </div>
   <button class="sync-badge" id="sync-btn" onclick="syncLeads()">↻ Sincronizar</button>
 </div>
-
-<!-- STATS -->
 <div class="stats">
   <div class="stat s-o"><div class="stat-num" id="st-total">—</div><div class="stat-lbl">Total leads</div></div>
   <div class="stat s-t"><div class="stat-num" id="st-conf">—</div><div class="stat-lbl">Confirmados</div></div>
@@ -216,412 +175,83 @@ body{font-family:'Poppins',sans-serif;background:var(--surface);color:var(--dark
   <div class="stat s-gr"><div class="stat-num" id="st-rec">—</div><div class="stat-lbl">Recebido</div></div>
   <div class="stat s-r"><div class="stat-num" id="st-falt">—</div><div class="stat-lbl">A receber</div></div>
 </div>
-
-<!-- TABS -->
 <div class="tabs">
   <div class="tab active" onclick="switchTab('lista',this)">Clientes & Leads</div>
   <div class="tab" onclick="switchTab('relatorio',this)">Relatório Financeiro</div>
   <div class="tab" onclick="switchTab('calendario',this)">Calendário</div>
 </div>
-
-<!-- LISTA -->
 <div id="view-lista" class="main-grid">
   <div class="form-panel">
     <div class="sec">Identificação</div>
     <div class="field"><label>Nome completo</label><input type="text" id="f-nome" placeholder="Ex: Ana Paula Santos"></div>
-    <div class="field">
-      <label>Tipo de evento</label>
-      <div class="tag-wrap" id="tipo-tags">
-        <div class="tag active" onclick="selTipo(this,'Casamento')">💍 Casamento</div>
-        <div class="tag" onclick="selTipo(this,'Aniversário')">🎂 Aniversário</div>
-        <div class="tag" onclick="selTipo(this,'Corporativo')">💼 Corporativo</div>
-        <div class="tag" onclick="selTipo(this,'Formatura')">🎓 Formatura</div>
-        <div class="tag" onclick="selTipo(this,'Debutante')">👑 Debutante</div>
-        <div class="tag" onclick="selTipo(this,'Outros')">✦ Outros</div>
-      </div>
-    </div>
-    <div class="field">
-      <label>Status</label>
-      <div class="tag-wrap" id="status-tags">
-        <div class="stag al" onclick="selStatus(this,'Lead','al')">Lead</div>
-        <div class="stag" onclick="selStatus(this,'Confirmado','ac')">Confirmado</div>
-        <div class="stag" onclick="selStatus(this,'Realizado','ar')">Realizado</div>
-        <div class="stag" onclick="selStatus(this,'Cancelado','ax')">Cancelado</div>
-      </div>
-    </div>
-    <div class="row2">
-      <div class="field" style="margin:0"><label>Data do evento</label><input type="date" id="f-data"></div>
-      <div class="field" style="margin:0"><label>Convidados</label><input type="number" id="f-conv" placeholder="150"></div>
-    </div>
-
+    <div class="field"><label>Tipo de evento</label><div class="tag-wrap" id="tipo-tags"><div class="tag active" onclick="selTipo(this,'Casamento')">💍 Casamento</div><div class="tag" onclick="selTipo(this,'Aniversário')">🎂 Aniversário</div><div class="tag" onclick="selTipo(this,'Corporativo')">💼 Corporativo</div><div class="tag" onclick="selTipo(this,'Formatura')">🎓 Formatura</div><div class="tag" onclick="selTipo(this,'Debutante')">👑 Debutante</div><div class="tag" onclick="selTipo(this,'Outros')">✦ Outros</div></div></div>
+    <div class="field"><label>Status</label><div class="tag-wrap" id="status-tags"><div class="stag al" onclick="selStatus(this,'Lead','al')">Lead</div><div class="stag" onclick="selStatus(this,'Confirmado','ac')">Confirmado</div><div class="stag" onclick="selStatus(this,'Realizado','ar')">Realizado</div><div class="stag" onclick="selStatus(this,'Cancelado','ax')">Cancelado</div></div></div>
+    <div class="row2"><div class="field" style="margin:0"><label>Data do evento</label><input type="date" id="f-data"></div><div class="field" style="margin:0"><label>Convidados</label><input type="number" id="f-conv" placeholder="150"></div></div>
     <div class="sec">Foto do cliente / evento</div>
-    <div class="photo-upload" onclick="document.getElementById('f-foto').click()">
-      <input type="file" id="f-foto" accept="image/*" style="display:none" onchange="previewPhoto(this)">
-      <img id="f-foto-preview" class="photo-preview">
-      <div class="photo-placeholder" id="photo-ph">📷 Clique para adicionar foto</div>
-    </div>
-
+    <div class="photo-upload" onclick="document.getElementById('f-foto').click()"><input type="file" id="f-foto" accept="image/*" style="display:none" onchange="previewPhoto(this)"><img id="f-foto-preview" class="photo-preview"><div class="photo-placeholder" id="photo-ph">📷 Clique para adicionar foto</div></div>
     <div class="sec">Contato</div>
-    <div class="row2">
-      <div class="field" style="margin:0"><label>E-mail</label><input type="email" id="f-email" placeholder="email@exemplo.com"></div>
-      <div class="field" style="margin:0"><label>WhatsApp</label><input type="tel" id="f-wa" placeholder="(11) 99999-9999"></div>
-    </div>
-
+    <div class="row2"><div class="field" style="margin:0"><label>E-mail</label><input type="email" id="f-email" placeholder="email@exemplo.com"></div><div class="field" style="margin:0"><label>WhatsApp</label><input type="tel" id="f-wa" placeholder="(11) 99999-9999"></div></div>
     <div class="sec">Anotações livres</div>
-    <div class="field"><textarea id="f-obs" placeholder="Tema, pedidos especiais, histórico de conversa, detalhes importantes..."></textarea></div>
-
+    <div class="field"><textarea id="f-obs" placeholder="Tema, pedidos especiais, histórico de conversa..."></textarea></div>
     <div class="sec">Financeiro — Parcelas</div>
     <div id="parcelas-form"></div>
     <button class="btn-add-parcela" onclick="addParcelaForm()">+ Adicionar parcela</button>
-    <div class="fin-preview" style="margin-top:.6rem">
-      <div class="fin-preview-lbl">Total · Pago · Falta</div>
-      <div class="fin-preview-val" id="fin-preview-txt">R$ 0 · R$ 0 · R$ 0</div>
-    </div>
+    <div class="fin-preview" style="margin-top:.6rem"><div class="fin-preview-lbl">Total · Pago · Falta</div><div class="fin-preview-val" id="fin-preview-txt">R$ 0 · R$ 0 · R$ 0</div></div>
     <button class="btn-add" id="btn-cadastrar" onclick="addLead()">+ Cadastrar cliente</button>
   </div>
-
   <div class="list-panel">
-    <div class="list-top">
-      <div style="font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700">Clientes & Leads</div>
-      <input class="search-input" type="text" placeholder="Buscar por nome..." oninput="renderLeads()" id="search">
-    </div>
-    <div class="filter-row">
-      <div class="ftab active" onclick="setFilter('Todos',this)">Todos</div>
-      <div class="ftab" onclick="setFilter('Lead',this)">Lead</div>
-      <div class="ftab" onclick="setFilter('Confirmado',this)">Confirmado</div>
-      <div class="ftab" onclick="setFilter('Realizado',this)">Realizado</div>
-      <div class="ftab" onclick="setFilter('Casamento',this)">💍 Casamento</div>
-      <div class="ftab" onclick="setFilter('Aniversário',this)">🎂 Aniversário</div>
-      <div class="ftab" onclick="setFilter('Corporativo',this)">💼 Corporativo</div>
-      <div class="ftab" onclick="setFilter('Formatura',this)">🎓 Formatura</div>
-      <div class="ftab" onclick="setFilter('Debutante',this)">👑 Debutante</div>
-      <div class="ftab" onclick="setFilter('WhatsApp',this)">📱 WhatsApp</div>
-    </div>
-    <div class="leads-list" id="leads-list">
-      <div class="loading"><div class="spinner"></div>Carregando clientes...</div>
-    </div>
+    <div class="list-top"><div style="font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700">Clientes & Leads</div><input class="search-input" type="text" placeholder="Buscar por nome..." oninput="renderLeads()" id="search"></div>
+    <div class="filter-row"><div class="ftab active" onclick="setFilter('Todos',this)">Todos</div><div class="ftab" onclick="setFilter('Lead',this)">Lead</div><div class="ftab" onclick="setFilter('Confirmado',this)">Confirmado</div><div class="ftab" onclick="setFilter('Realizado',this)">Realizado</div><div class="ftab" onclick="setFilter('Casamento',this)">💍 Casamento</div><div class="ftab" onclick="setFilter('Aniversário',this)">🎂 Aniversário</div><div class="ftab" onclick="setFilter('Corporativo',this)">💼 Corporativo</div><div class="ftab" onclick="setFilter('Formatura',this)">🎓 Formatura</div><div class="ftab" onclick="setFilter('Debutante',this)">👑 Debutante</div><div class="ftab" onclick="setFilter('WhatsApp',this)">📱 WhatsApp</div></div>
+    <div class="leads-list" id="leads-list"><div class="loading"><div class="spinner"></div>Carregando clientes...</div></div>
   </div>
 </div>
-
-<!-- RELATÓRIO -->
 <div id="view-relatorio" style="display:none;padding:1.25rem">
   <div class="mes-row" id="mes-row"></div>
-  <div class="rel-grid">
-    <div class="rel-card"><div class="rel-card-val" id="r-total" style="color:var(--dark)">R$ 0</div><div class="rel-card-lbl">Total contratado</div></div>
-    <div class="rel-card"><div class="rel-card-val" id="r-rec" style="color:var(--teal-dark)">R$ 0</div><div class="rel-card-lbl">Recebido</div></div>
-    <div class="rel-card"><div class="rel-card-val" id="r-falt" style="color:var(--orange)">R$ 0</div><div class="rel-card-lbl">A receber</div></div>
-  </div>
-  <table class="rel-table">
-    <thead><tr><th>Cliente</th><th>Tipo</th><th>Data</th><th>Total</th><th>Pago</th><th>Falta</th><th>Status</th></tr></thead>
-    <tbody id="rel-tbody"></tbody>
-  </table>
+  <div class="rel-grid"><div class="rel-card"><div class="rel-card-val" id="r-total" style="color:var(--dark)">R$ 0</div><div class="rel-card-lbl">Total contratado</div></div><div class="rel-card"><div class="rel-card-val" id="r-rec" style="color:var(--teal-dark)">R$ 0</div><div class="rel-card-lbl">Recebido</div></div><div class="rel-card"><div class="rel-card-val" id="r-falt" style="color:var(--orange)">R$ 0</div><div class="rel-card-lbl">A receber</div></div></div>
+  <table class="rel-table"><thead><tr><th>Cliente</th><th>Tipo</th><th>Data</th><th>Total</th><th>Pago</th><th>Falta</th><th>Status</th></tr></thead><tbody id="rel-tbody"></tbody></table>
 </div>
-
-<!-- CALENDÁRIO -->
 <div id="view-calendario" style="display:none;padding:1.25rem">
-  <div class="cal-nav">
-    <button onclick="calPrev()">← Anterior</button>
-    <div class="cal-month-lbl" id="cal-lbl"></div>
-    <button onclick="calNext()">Próximo →</button>
-  </div>
+  <div class="cal-nav"><button onclick="calPrev()">← Anterior</button><div class="cal-month-lbl" id="cal-lbl"></div><button onclick="calNext()">Próximo →</button></div>
   <div class="cal-grid" id="cal-grid"></div>
-  <div style="margin-top:1rem;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Eventos do mês</div>
+  <div style="margin-top:1rem;font-size:10px;font-weight:600;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem">Eventos do mês</div>
   <div id="cal-ev-list" style="display:flex;flex-direction:column;gap:6px"></div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <script>
-// ── Estado global ─────────────────────────────────────────────────────────────
-let leads = [];
-let tipoSel = 'Casamento', statusSel = 'Lead', statusClass = 'al';
-let filtroAtivo = 'Todos';
-let calY = new Date().getFullYear(), calM = new Date().getMonth();
-let parcelasForm = [], relMes = -1;
-const avCls = ['av-o','av-t','av-g'];
-
-// ── API ───────────────────────────────────────────────────────────────────────
-const API = '/api/leads';
-
-async function fetchLeads() {
-  try {
-    const r = await fetch(API);
-    leads = await r.json();
-    if (!Array.isArray(leads)) leads = [];
-  } catch(e) {
-    console.error(e);
-    leads = JSON.parse(localStorage.getItem('leads_backup') || '[]');
-  }
-  localStorage.setItem('leads_backup', JSON.stringify(leads));
-  renderLeads(); updateStats();
-}
-
-async function syncLeads() {
-  const btn = document.getElementById('sync-btn');
-  btn.classList.add('syncing'); btn.textContent = '↻ Sincronizando...';
-  await fetchLeads();
-  btn.classList.remove('syncing'); btn.textContent = '↻ Sincronizar';
-  toast('✓ Dados atualizados!');
-}
-
-async function apiPost(lead) {
-  const r = await fetch(API, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead) });
-  return r.json();
-}
-
-async function apiDelete(id) {
-  await fetch(`${API}?id=${id}`, { method:'DELETE' });
-}
-
-async function apiUpdate(id, data) {
-  await fetch(`/api/lead-update?id=${id}`, { method:'PUT', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data) });
-}
-
-// ── Helpers ───────────────────────────────────────────────────────────────────
+let leads=[];let tipoSel='Casamento',statusSel='Lead',statusClass='al';let filtroAtivo='Todos';let calY=new Date().getFullYear(),calM=new Date().getMonth();let parcelasForm=[],relMes=-1;const avCls=['av-o','av-t','av-g'];const LS_KEY='espaco_vip_crm_leads';
+function getLocal(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return[]}}
+function saveLocal(arr){localStorage.setItem(LS_KEY,JSON.stringify(arr))}
+async function fetchLeads(){try{const r=await fetch('/api/leads',{signal:AbortSignal.timeout(3000)});if(r.ok){const data=await r.json();if(Array.isArray(data)&&data.length>=getLocal().length){leads=data;saveLocal(leads);}else{leads=getLocal();}}else{leads=getLocal();}}catch(e){leads=getLocal();}renderLeads();updateStats();}
+async function syncLeads(){const btn=document.getElementById('sync-btn');btn.classList.add('syncing');btn.textContent='↻ Sincronizando...';await fetchLeads();btn.classList.remove('syncing');btn.textContent='↻ Sincronizar';toast('✓ Dados atualizados!');}
+async function apiPost(lead){try{const r=await fetch('/api/leads',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead),signal:AbortSignal.timeout(3000)});return r.ok;}catch(e){return false;}}
+async function apiDelete(id){try{await fetch('/api/leads?id='+id,{method:'DELETE',signal:AbortSignal.timeout(3000)});}catch(e){}}
 function fmt(n){return'R$ '+parseFloat(n||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
 function fmtS(n){const v=parseFloat(n||0);if(v>=1000)return'R$ '+Math.round(v/1000)+'k';return'R$ '+Math.round(v)}
-function fmtD(d){if(!d)return'';const[y,m,day]=d.split('-');return`${day}/${m}/${y}`}
+function fmtD(d){if(!d)return'';const[y,m,day]=d.split('-');return day+'/'+m+'/'+y}
 function ini(n){const p=n.trim().split(' ');return p.length>=2?(p[0][0]+p[p.length-1][0]).toUpperCase():n.slice(0,2).toUpperCase()}
 function isProx(d){if(!d)return false;const diff=(new Date(d+'T12:00:00')-new Date())/86400000;return diff>=0&&diff<=30}
 function badgeCls(t){return{'Casamento':'bc','Aniversário':'ba','Corporativo':'bco','Formatura':'bf','Debutante':'bd','Outros':'bo'}[t]||'bo'}
 function sbCls(s){return{'Lead':'sb-l','Confirmado':'sb-c','Realizado':'sb-r','Cancelado':'sb-x'}[s]||'sb-l'}
-function gcalUrl(l){
-  if(!l.data)return null;
-  const d=l.data.replace(/-/g,'');
-  return`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(l.tipo+' - '+l.nome+' | Espaço VIP')}&dates=${d}/${d}&details=${encodeURIComponent('Cliente: '+l.nome+'\nTipo: '+l.tipo+'\nConvidados: '+(l.conv||'—')+'\nObs: '+(l.obs||'—'))}`;
-}
+function gcalUrl(l){if(!l.data)return null;const d=l.data.replace(/-/g,'');return'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(l.tipo+' - '+l.nome+' | Espaço VIP')+'&dates='+d+'/'+d+'&details='+encodeURIComponent('Cliente: '+l.nome+'\nTipo: '+l.tipo+'\nConvidados: '+(l.conv||'—')+'\nObs: '+(l.obs||'—'));}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
-
-// ── UI helpers ────────────────────────────────────────────────────────────────
 function selTipo(el,t){document.querySelectorAll('#tipo-tags .tag').forEach(x=>x.classList.remove('active'));el.classList.add('active');tipoSel=t}
 function selStatus(el,s,cls){document.querySelectorAll('#status-tags .stag').forEach(x=>{x.className='stag'});el.classList.add(cls);statusSel=s;statusClass=cls}
 function setFilter(f,el){filtroAtivo=f;document.querySelectorAll('.ftab').forEach(x=>x.classList.remove('active'));el.classList.add('active');renderLeads()}
-function switchTab(v,el){
-  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');
-  document.getElementById('view-lista').style.display=v==='lista'?'grid':'none';
-  document.getElementById('view-relatorio').style.display=v==='relatorio'?'block':'none';
-  document.getElementById('view-calendario').style.display=v==='calendario'?'block':'none';
-  if(v==='relatorio')renderRelatorio();
-  if(v==='calendario')renderCalendar();
-}
-
-function previewPhoto(input){
-  const file=input.files[0];if(!file)return;
-  const reader=new FileReader();
-  reader.onload=e=>{
-    const img=document.getElementById('f-foto-preview');
-    img.src=e.target.result;img.style.display='block';
-    document.getElementById('photo-ph').style.display='none';
-  };
-  reader.readAsDataURL(file);
-}
-
-// ── Parcelas form ─────────────────────────────────────────────────────────────
+function switchTab(v,el){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));el.classList.add('active');document.getElementById('view-lista').style.display=v==='lista'?'grid':'none';document.getElementById('view-relatorio').style.display=v==='relatorio'?'block':'none';document.getElementById('view-calendario').style.display=v==='calendario'?'block':'none';if(v==='relatorio')renderRelatorio();if(v==='calendario')renderCalendar();}
+function previewPhoto(input){const file=input.files[0];if(!file)return;const reader=new FileReader();reader.onload=e=>{const img=document.getElementById('f-foto-preview');img.src=e.target.result;img.style.display='block';document.getElementById('photo-ph').style.display='none';};reader.readAsDataURL(file);}
 function addParcelaForm(){parcelasForm.push({desc:'',valor:'',pago:false});renderParcelasForm()}
-function renderParcelasForm(){
-  document.getElementById('parcelas-form').innerHTML=parcelasForm.map((p,i)=>`
-    <div class="parcela-row">
-      <input type="text" value="${p.desc}" placeholder="Ex: Entrada" oninput="parcelasForm[${i}].desc=this.value;updFin()">
-      <input type="number" value="${p.valor}" placeholder="R$ valor" oninput="parcelasForm[${i}].valor=this.value;updFin()">
-      <button class="btn-pago ${p.pago?'pago':'pendente'}" onclick="parcelasForm[${i}].pago=!parcelasForm[${i}].pago;renderParcelasForm()">${p.pago?'✓ Pago':'Pendente'}</button>
-      <button class="btn-rm-p" onclick="parcelasForm.splice(${i},1);renderParcelasForm()">✕</button>
-    </div>`).join('');
-  updFin();
-}
-function updFin(){
-  const total=parcelasForm.reduce((s,p)=>s+parseFloat(p.valor||0),0);
-  const pago=parcelasForm.filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);
-  document.getElementById('fin-preview-txt').textContent=`${fmt(total)} · ${fmt(pago)} · ${fmt(Math.max(0,total-pago))}`;
-}
-
-// ── Stats ─────────────────────────────────────────────────────────────────────
-function updateStats(){
-  document.getElementById('st-total').textContent=leads.length;
-  document.getElementById('st-conf').textContent=leads.filter(l=>l.status==='Confirmado').length;
-  document.getElementById('st-prox').textContent=leads.filter(l=>isProx(l.data)).length;
-  const rec=leads.reduce((s,l)=>(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);
-  const falt=leads.reduce((s,l)=>{const tot=(l.parcelas||[]).reduce((a,p)=>a+parseFloat(p.valor||0),0);const pg=(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),0);return s+Math.max(0,tot-pg)},0);
-  document.getElementById('st-rec').textContent=fmtS(rec);
-  document.getElementById('st-falt').textContent=fmtS(falt);
-}
-
-// ── Render leads ──────────────────────────────────────────────────────────────
-function renderLeads(){
-  const search=document.getElementById('search').value.toLowerCase();
-  let filtered=leads.filter(l=>{
-    if(filtroAtivo==='WhatsApp')return l.origemWhatsApp;
-    const mF=filtroAtivo==='Todos'||l.tipo===filtroAtivo||l.status===filtroAtivo;
-    const mS=!search||l.nome.toLowerCase().includes(search);
-    return mF&&mS;
-  }).slice().reverse();
-  const c=document.getElementById('leads-list');
-  if(!filtered.length){c.innerHTML=`<div style="text-align:center;padding:3rem;color:var(--muted)"><div style="font-size:2rem;opacity:.3">👑</div><div style="margin-top:.5rem">Nenhum cliente encontrado</div></div>`;return}
-  c.innerHTML=filtered.map((l,i)=>{
-    const parcelas=l.parcelas||[];
-    const total=parcelas.reduce((s,p)=>s+parseFloat(p.valor||0),0);
-    const pago=parcelas.filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);
-    const falt=Math.max(0,total-pago);
-    const pct=total>0?Math.round((pago/total)*100):0;
-    return`<div class="lead-card">
-      ${l.foto?`<img class="lc-photo" src="${l.foto}" alt="foto">`:''}
-      <div class="lc-body">
-        <div class="lc-top">
-          <div class="avatar ${avCls[i%3]}">${ini(l.nome)}</div>
-          <div style="flex:1;min-width:0">
-            <div class="lead-name">${l.nome}</div>
-            <div class="lead-meta">${[l.wa,l.email,l.conv?l.conv+' conv.':''].filter(Boolean).join(' · ')}</div>
-          </div>
-          <div class="lc-badges">
-            ${l.origemWhatsApp?'<span class="wa-badge">📱 WhatsApp</span>':''}
-            <div class="tipo-badge ${badgeCls(l.tipo)}">${l.tipo}</div>
-            <div class="status-badge ${sbCls(l.status)}">${l.status}</div>
-          </div>
-        </div>
-        ${l.obs?`<div class="lc-notas">📝 ${l.obs.length>140?l.obs.slice(0,140)+'...':l.obs}</div>`:''}
-        ${parcelas.length?`<div class="lc-parcelas">
-          <div class="parcelas-titulo">Parcelas — ${pct}% pago</div>
-          ${parcelas.map(p=>`<div class="parcela-item">
-            <div class="parcela-dot ${p.pago?'dot-pago':'dot-pend'}"></div>
-            <div style="flex:1;color:var(--mid)">${p.desc||'Parcela'}</div>
-            <div style="font-weight:500;color:${p.pago?'var(--teal-dark)':'var(--orange)'}">${fmt(p.valor)}</div>
-            <span style="font-size:10px;color:var(--muted);margin-left:4px">${p.pago?'✓ pago':'pendente'}</span>
-          </div>`).join('')}
-          <div class="prog-bar"><div class="prog-fill" style="width:${Math.min(100,pct)}%;background:${pct>=100?'var(--green)':'var(--teal)'}"></div></div>
-          <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:3px">
-            <span>Pago: ${fmt(pago)}</span><span>Falta: ${fmt(falt)}</span><span>Total: ${fmt(total)}</span>
-          </div>
-        </div>`:''}
-        <div class="lc-actions">
-          ${l.data?`<div class="date-pill">📅 ${fmtD(l.data)}</div>`:''}
-          ${l.wa?`<button class="abtn btn-wa" onclick="openWA('${l.wa}','${l.nome}','${l.tipo}','${l.data||''}')">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.855L0 24l6.335-1.512A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.847 0-3.575-.493-5.072-1.353l-.364-.215-3.76.897.944-3.653-.236-.373A9.818 9.818 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
-            WhatsApp</button>`:''}
-          ${l.data?`<button class="abtn btn-gcal" onclick="window.open('${gcalUrl(l)}','_blank')">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Calendar</button>`:''}
-          <button class="abtn btn-del" onclick="deleteLead('${l.id}')">✕ Remover</button>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function openWA(wa,nome,tipo,data){
-  const num=wa.replace(/\D/g,'');
-  const full=num.startsWith('55')?num:'55'+num;
-  const d=data?` marcado para ${fmtD(data)}`:'';
-  window.open(`https://wa.me/${full}?text=${encodeURIComponent('Olá '+nome+'! 😊\nSou do Espaço VIP, estou entrando em contato sobre o seu evento de '+tipo+d+'.\nPosso te ajudar com mais informações?')}`, '_blank');
-}
-
-async function deleteLead(id){
-  if(!confirm('Remover este cliente?'))return;
-  leads=leads.filter(l=>l.id!==id);
-  renderLeads();updateStats();
-  await apiDelete(id);
-  toast('Cliente removido');
-}
-
-async function addLead(){
-  const nome=document.getElementById('f-nome').value.trim();
-  if(!nome){toast('Informe o nome do cliente');return}
-  const btn=document.getElementById('btn-cadastrar');
-  btn.disabled=true;btn.textContent='Salvando...';
-  const fotoSrc=document.getElementById('f-foto-preview').src;
-  const lead={
-    id:Date.now().toString(),nome,tipo:tipoSel,status:statusSel,
-    data:document.getElementById('f-data').value,
-    email:document.getElementById('f-email').value.trim(),
-    wa:document.getElementById('f-wa').value.trim(),
-    conv:document.getElementById('f-conv').value,
-    obs:document.getElementById('f-obs').value.trim(),
-    foto:(fotoSrc&&fotoSrc.startsWith('data:'))?fotoSrc:'',
-    parcelas:parcelasForm.map(p=>({...p})),
-    origemWhatsApp:false,
-    criadoEm:new Date().toISOString()
-  };
-  try{
-    await apiPost(lead);
-    leads.push(lead);
-    ['f-nome','f-data','f-email','f-wa','f-conv','f-obs'].forEach(id=>document.getElementById(id).value='');
-    document.getElementById('f-foto-preview').src='';
-    document.getElementById('f-foto-preview').style.display='none';
-    document.getElementById('photo-ph').style.display='block';
-    parcelasForm=[];renderParcelasForm();
-    renderLeads();updateStats();
-    toast('✓ Cliente cadastrado e salvo na nuvem!');
-    if(lead.data){setTimeout(()=>{if(confirm(`Adicionar evento de ${lead.nome} ao Google Calendar?`))window.open(gcalUrl(lead),'_blank')},400)}
-  }catch(e){
-    toast('Erro ao salvar. Verifique a conexão.');
-  }
-  btn.disabled=false;btn.textContent='+ Cadastrar cliente';
-}
-
-// ── Relatório ─────────────────────────────────────────────────────────────────
-function renderRelatorio(){
-  const meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-  document.getElementById('mes-row').innerHTML=
-    `<div class="mes-btn ${relMes===-1?'active':''}" onclick="relMes=-1;renderRelatorio()">Todos</div>`+
-    meses.map((m,i)=>`<div class="mes-btn ${relMes===i?'active':''}" onclick="relMes=${i};renderRelatorio()">${m}</div>`).join('');
-  const filtered=leads.filter(l=>relMes===-1||(!l.data?false:parseInt(l.data.split('-')[1])-1===relMes));
-  const total=filtered.reduce((s,l)=>(l.parcelas||[]).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);
-  const rec=filtered.reduce((s,l)=>(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);
-  document.getElementById('r-total').textContent=fmt(total);
-  document.getElementById('r-rec').textContent=fmt(rec);
-  document.getElementById('r-falt').textContent=fmt(Math.max(0,total-rec));
-  const tbody=document.getElementById('rel-tbody');
-  if(!filtered.length){tbody.innerHTML=`<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:1.5rem">Nenhum evento neste período</td></tr>`;return}
-  tbody.innerHTML=filtered.sort((a,b)=>(a.data||'').localeCompare(b.data||'')).map(l=>{
-    const tot=(l.parcelas||[]).reduce((s,p)=>s+parseFloat(p.valor||0),0);
-    const pg=(l.parcelas||[]).filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);
-    return`<tr>
-      <td style="font-weight:500">${l.nome}${l.origemWhatsApp?'<span class="wa-badge" style="margin-left:6px">📱</span>':''}</td>
-      <td>${l.tipo}</td><td>${fmtD(l.data)||'—'}</td>
-      <td style="font-weight:500">${tot?fmt(tot):'—'}</td>
-      <td style="color:var(--teal-dark)">${pg?fmt(pg):'—'}</td>
-      <td style="color:var(--orange)">${(tot-pg)>0?fmt(tot-pg):'—'}</td>
-      <td><span class="status-badge ${sbCls(l.status)}">${l.status}</span></td>
-    </tr>`;
-  }).join('');
-}
-
-// ── Calendário ────────────────────────────────────────────────────────────────
-function renderCalendar(){
-  const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
-  const days=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
-  document.getElementById('cal-lbl').textContent=months[calM]+' '+calY;
-  const firstDay=new Date(calY,calM,1).getDay();
-  const daysInMonth=new Date(calY,calM+1,0).getDate();
-  const today=new Date();
-  const byDay={};
-  leads.filter(l=>{if(!l.data)return false;const d=new Date(l.data+'T12:00:00');return d.getMonth()===calM&&d.getFullYear()===calY})
-    .forEach(l=>{const d=parseInt(l.data.split('-')[2]);if(!byDay[d])byDay[d]=[];byDay[d].push(l)});
-  let html=days.map(d=>`<div class="cal-head">${d}</div>`).join('');
-  for(let i=0;i<firstDay;i++)html+=`<div class="cal-day empty"></div>`;
-  for(let d=1;d<=daysInMonth;d++){
-    const isT=today.getDate()===d&&today.getMonth()===calM&&today.getFullYear()===calY;
-    html+=`<div class="cal-day${isT?' today':''}"><div class="cal-day-n">${d}</div>${(byDay[d]||[]).map(e=>`<div class="cal-dot">${e.nome.split(' ')[0]}</div>`).join('')}</div>`;
-  }
-  document.getElementById('cal-grid').innerHTML=html;
-  const evList=document.getElementById('cal-ev-list');
-  const thisMonth=Object.values(byDay).flat().sort((a,b)=>a.data.localeCompare(b.data));
-  if(!thisMonth.length){evList.innerHTML=`<div style="color:var(--muted);font-size:13px">Nenhum evento neste mês</div>`;return}
-  evList.innerHTML=thisMonth.map(l=>`
-    <div style="background:var(--white);border:.5px solid var(--border);border-radius:8px;padding:.6rem 1rem;display:flex;align-items:center;gap:10px">
-      <div style="background:var(--orange-light);color:var(--orange-dark);font-family:'Poppins',sans-serif;font-weight:700;font-size:11px;padding:4px 8px;border-radius:6px;min-width:32px;text-align:center">${l.data.split('-')[2]}</div>
-      <div style="flex:1"><div style="font-weight:500;font-size:13px">${l.nome}</div><div style="font-size:11px;color:var(--muted)">${l.tipo}${l.conv?' · '+l.conv+' conv.':''}</div></div>
-      <span class="status-badge ${sbCls(l.status)}">${l.status}</span>
-      ${l.data?`<button class="abtn btn-gcal" style="font-size:10px" onclick="window.open('${gcalUrl(l)}','_blank')">Calendar</button>`:''}
-    </div>`).join('');
-}
+function renderParcelasForm(){document.getElementById('parcelas-form').innerHTML=parcelasForm.map((p,i)=>'<div class="parcela-row"><input type="text" value="'+p.desc+'" placeholder="Ex: Entrada" oninput="parcelasForm['+i+'].desc=this.value;updFin()"><input type="number" value="'+p.valor+'" placeholder="R$ valor" oninput="parcelasForm['+i+'].valor=this.value;updFin()"><button class="btn-pago '+(p.pago?'pago':'pendente')+'" onclick="parcelasForm['+i+'].pago=!parcelasForm['+i+'].pago;renderParcelasForm()">'+(p.pago?'✓ Pago':'Pendente')+'</button><button class="btn-rm-p" onclick="parcelasForm.splice('+i+',1);renderParcelasForm()">✕</button></div>').join('');updFin();}
+function updFin(){const total=parcelasForm.reduce((s,p)=>s+parseFloat(p.valor||0),0);const pago=parcelasForm.filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);document.getElementById('fin-preview-txt').textContent=fmt(total)+' · '+fmt(pago)+' · '+fmt(Math.max(0,total-pago));}
+function updateStats(){document.getElementById('st-total').textContent=leads.length;document.getElementById('st-conf').textContent=leads.filter(l=>l.status==='Confirmado').length;document.getElementById('st-prox').textContent=leads.filter(l=>isProx(l.data)).length;const rec=leads.reduce((s,l)=>(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);const falt=leads.reduce((s,l)=>{const tot=(l.parcelas||[]).reduce((a,p)=>a+parseFloat(p.valor||0),0);const pg=(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),0);return s+Math.max(0,tot-pg)},0);document.getElementById('st-rec').textContent=fmtS(rec);document.getElementById('st-falt').textContent=fmtS(falt);}
+function renderLeads(){const search=document.getElementById('search').value.toLowerCase();let filtered=leads.filter(l=>{if(filtroAtivo==='WhatsApp')return l.origemWhatsApp;const mF=filtroAtivo==='Todos'||l.tipo===filtroAtivo||l.status===filtroAtivo;const mS=!search||l.nome.toLowerCase().includes(search);return mF&&mS;}).slice().reverse();const c=document.getElementById('leads-list');if(!filtered.length){c.innerHTML='<div style="text-align:center;padding:3rem;color:var(--muted)"><div style="font-size:2rem;opacity:.3">👑</div><div style="margin-top:.5rem">Nenhum cliente encontrado</div></div>';return}c.innerHTML=filtered.map((l,i)=>{const parcelas=l.parcelas||[];const total=parcelas.reduce((s,p)=>s+parseFloat(p.valor||0),0);const pago=parcelas.filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);const falt=Math.max(0,total-pago);const pct=total>0?Math.round((pago/total)*100):0;return'<div class="lead-card">'+(l.foto?'<img class="lc-photo" src="'+l.foto+'" alt="foto">':'')+'<div class="lc-body"><div class="lc-top"><div class="avatar '+avCls[i%3]+'">'+ini(l.nome)+'</div><div style="flex:1;min-width:0"><div class="lead-name">'+l.nome+'</div><div class="lead-meta">'+(([l.wa,l.email,l.conv?l.conv+' conv.':'']).filter(Boolean).join(' · '))+'</div></div><div class="lc-badges">'+(l.origemWhatsApp?'<span class="wa-badge">📱 WhatsApp</span>':'')+'<div class="tipo-badge '+badgeCls(l.tipo)+'">'+l.tipo+'</div><div class="status-badge '+sbCls(l.status)+'">'+l.status+'</div></div></div>'+(l.obs?'<div class="lc-notas">📝 '+(l.obs.length>140?l.obs.slice(0,140)+'...':l.obs)+'</div>':'')+(parcelas.length?'<div class="lc-parcelas"><div class="parcelas-titulo">Parcelas — '+pct+'% pago</div>'+parcelas.map(p=>'<div class="parcela-item"><div class="parcela-dot '+(p.pago?'dot-pago':'dot-pend')+'"></div><div style="flex:1;color:var(--mid)">'+( p.desc||'Parcela')+'</div><div style="font-weight:500;color:'+(p.pago?'var(--teal-dark)':'var(--orange)')+'">'+fmt(p.valor)+'</div><span style="font-size:10px;color:var(--muted);margin-left:4px">'+(p.pago?'✓ pago':'pendente')+'</span></div>').join('')+'<div class="prog-bar"><div class="prog-fill" style="width:'+Math.min(100,pct)+'%;background:'+(pct>=100?'var(--green)':'var(--teal)')+'"></div></div><div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:3px"><span>Pago: '+fmt(pago)+'</span><span>Falta: '+fmt(falt)+'</span><span>Total: '+fmt(total)+'</span></div></div>':'')+'<div class="lc-actions">'+(l.data?'<div class="date-pill">📅 '+fmtD(l.data)+'</div>':'')+(l.wa?'<button class="abtn btn-wa" onclick="openWA(\'' +l.wa+'\',\''+l.nome+'\',\''+l.tipo+'\',\''+( l.data||'')+'\')">WhatsApp</button>':'')+(l.data&&gcalUrl(l)?'<button class="abtn btn-gcal" onclick="window.open(\''+gcalUrl(l)+'\',\'_blank\')">Calendar</button>':'')+'<button class="abtn btn-del" onclick="deleteLead(\''+l.id+'\')" >✕ Remover</button></div></div></div>';}).join('');}
+function openWA(wa,nome,tipo,data){const num=wa.replace(/\D/g,'');const full=num.startsWith('55')?num:'55'+num;const d=data?' marcado para '+fmtD(data):'';window.open('https://wa.me/'+full+'?text='+encodeURIComponent('Olá '+nome+'! 😊\nSou do Espaço VIP, estou entrando em contato sobre o seu evento de '+tipo+d+'.\nPosso te ajudar com mais informações?'),'_blank');}
+async function deleteLead(id){if(!confirm('Remover este cliente?'))return;leads=leads.filter(l=>l.id!==id);saveLocal(leads);renderLeads();updateStats();apiDelete(id);toast('Cliente removido');}
+async function addLead(){const nome=document.getElementById('f-nome').value.trim();if(!nome){toast('Informe o nome do cliente');return}const btn=document.getElementById('btn-cadastrar');btn.disabled=true;btn.textContent='Salvando...';const fotoSrc=document.getElementById('f-foto-preview').src;const lead={id:Date.now().toString(),nome,tipo:tipoSel,status:statusSel,data:document.getElementById('f-data').value,email:document.getElementById('f-email').value.trim(),wa:document.getElementById('f-wa').value.trim(),conv:document.getElementById('f-conv').value,obs:document.getElementById('f-obs').value.trim(),foto:(fotoSrc&&fotoSrc.startsWith('data:'))?fotoSrc:'',parcelas:parcelasForm.map(p=>({...p})),origemWhatsApp:false,criadoEm:new Date().toISOString()};leads.push(lead);saveLocal(leads);['f-nome','f-data','f-email','f-wa','f-conv','f-obs'].forEach(id=>document.getElementById(id).value='');document.getElementById('f-foto-preview').src='';document.getElementById('f-foto-preview').style.display='none';document.getElementById('photo-ph').style.display='block';parcelasForm=[];renderParcelasForm();renderLeads();updateStats();toast('✓ Cliente cadastrado!');apiPost(lead);if(lead.data){setTimeout(()=>{if(confirm('Adicionar evento de '+lead.nome+' ao Google Calendar?'))window.open(gcalUrl(lead),'_blank')},400)}btn.disabled=false;btn.textContent='+ Cadastrar cliente';}
+function renderRelatorio(){const meses=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];document.getElementById('mes-row').innerHTML='<div class="mes-btn '+(relMes===-1?'active':'')+' " onclick="relMes=-1;renderRelatorio()">Todos</div>'+meses.map((m,i)=>'<div class="mes-btn '+(relMes===i?'active':'')+' " onclick="relMes='+i+';renderRelatorio()">'+m+'</div>').join('');const filtered=leads.filter(l=>relMes===-1||(!l.data?false:parseInt(l.data.split('-')[1])-1===relMes));const total=filtered.reduce((s,l)=>(l.parcelas||[]).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);const rec=filtered.reduce((s,l)=>(l.parcelas||[]).filter(p=>p.pago).reduce((a,p)=>a+parseFloat(p.valor||0),s),0);document.getElementById('r-total').textContent=fmt(total);document.getElementById('r-rec').textContent=fmt(rec);document.getElementById('r-falt').textContent=fmt(Math.max(0,total-rec));const tbody=document.getElementById('rel-tbody');if(!filtered.length){tbody.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:1.5rem">Nenhum evento neste período</td></tr>';return}tbody.innerHTML=filtered.sort((a,b)=>(a.data||'').localeCompare(b.data||'')).map(l=>{const tot=(l.parcelas||[]).reduce((s,p)=>s+parseFloat(p.valor||0),0);const pg=(l.parcelas||[]).filter(p=>p.pago).reduce((s,p)=>s+parseFloat(p.valor||0),0);return'<tr><td style="font-weight:500">'+l.nome+(l.origemWhatsApp?'<span class="wa-badge" style="margin-left:6px">📱</span>':'')+'</td><td>'+l.tipo+'</td><td>'+(fmtD(l.data)||'—')+'</td><td style="font-weight:500">'+(tot?fmt(tot):'—')+'</td><td style="color:var(--teal-dark)">'+(pg?fmt(pg):'—')+'</td><td style="color:var(--orange)">'+(( tot-pg)>0?fmt(tot-pg):'—')+'</td><td><span class="status-badge '+sbCls(l.status)+'">'+l.status+'</span></td></tr>';}).join('');}
+function renderCalendar(){const months=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];const days=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];document.getElementById('cal-lbl').textContent=months[calM]+' '+calY;const firstDay=new Date(calY,calM,1).getDay();const daysInMonth=new Date(calY,calM+1,0).getDate();const today=new Date();const byDay={};leads.filter(l=>{if(!l.data)return false;const d=new Date(l.data+'T12:00:00');return d.getMonth()===calM&&d.getFullYear()===calY}).forEach(l=>{const d=parseInt(l.data.split('-')[2]);if(!byDay[d])byDay[d]=[];byDay[d].push(l)});let html=days.map(d=>'<div class="cal-head">'+d+'</div>').join('');for(let i=0;i<firstDay;i++)html+='<div class="cal-day empty"></div>';for(let d=1;d<=daysInMonth;d++){const isT=today.getDate()===d&&today.getMonth()===calM&&today.getFullYear()===calY;html+='<div class="cal-day'+(isT?' today':'')+'"><div class="cal-day-n">'+d+'</div>'+((byDay[d]||[]).map(e=>'<div class="cal-dot">'+e.nome.split(' ')[0]+'</div>').join(''))+'</div>';}document.getElementById('cal-grid').innerHTML=html;const evList=document.getElementById('cal-ev-list');const thisMonth=Object.values(byDay).flat().sort((a,b)=>a.data.localeCompare(b.data));if(!thisMonth.length){evList.innerHTML='<div style="color:var(--muted);font-size:13px">Nenhum evento neste mês</div>';return}evList.innerHTML=thisMonth.map(l=>'<div style="background:var(--white);border:.5px solid var(--border);border-radius:8px;padding:.6rem 1rem;display:flex;align-items:center;gap:10px"><div style="background:var(--orange-light);color:var(--orange-dark);font-family:Poppins,sans-serif;font-weight:700;font-size:11px;padding:4px 8px;border-radius:6px;min-width:32px;text-align:center">'+l.data.split('-')[2]+'</div><div style="flex:1"><div style="font-weight:500;font-size:13px">'+l.nome+'</div><div style="font-size:11px;color:var(--muted)">'+l.tipo+(l.conv?' · '+l.conv+' conv.':'')+'</div></div><span class="status-badge '+sbCls(l.status)+'">'+l.status+'</span>'+(l.data&&gcalUrl(l)?'<button class="abtn btn-gcal" style="font-size:10px" onclick="window.open(\''+gcalUrl(l)+'\',\'_blank\')">Calendar</button>':'')+'</div>').join('');}
 function calPrev(){calM--;if(calM<0){calM=11;calY--}renderCalendar()}
 function calNext(){calM++;if(calM>11){calM=0;calY++}renderCalendar()}
-
-// ── Init ──────────────────────────────────────────────────────────────────────
-fetchLeads();
-renderParcelasForm();
-
-// Auto-sync a cada 30 segundos
-setInterval(fetchLeads, 30000);
+fetchLeads();renderParcelasForm();setInterval(fetchLeads,30000);
 </script>
 </body>
 </html>
