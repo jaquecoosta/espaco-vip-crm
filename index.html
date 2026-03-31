@@ -985,8 +985,8 @@ function renderLeads(){
               ${countdownHtml}
             </div>`;
           })():''}
-          ${l.wa?`<button class="abtn btn-wa" onclick="openWA(${JSON.stringify(l.wa)},${JSON.stringify(l.nome)},${JSON.stringify(l.tipo)},${JSON.stringify(l.data||'')})">📱 WhatsApp</button>`:''}
-          ${url?`<button class="abtn btn-gcal" onclick="window.open(${JSON.stringify(url)},'_blank')">📅 Calendar</button>`:''}
+          ${l.wa?`<button class="abtn btn-wa" onclick="openWA('${l.id}')">📱 WhatsApp</button>`:''}
+          ${url?`<button class="abtn btn-gcal" onclick="abrirCalendar('${l.id}')">📅 Calendar</button>`:''}
           <button class="abtn btn-editar" onclick="abrirEdicao('${l.id}')">✏️ Editar</button>
           <button class="abtn btn-del" onclick="deleteLead('${l.id}')">✕</button>
         </div>
@@ -996,10 +996,18 @@ function renderLeads(){
 }
 
 // ---- AÇÕES ----
-function openWA(wa,nome,tipo,data){
-  const num=wa.replace(/\D/g,'');const full=num.startsWith('55')?num:'55'+num;
-  const d=data?' marcado para '+fmtD(data):'';
-  window.open('https://wa.me/'+full+'?text='+encodeURIComponent('Olá '+nome+'! 😊\nSou do Espaço VIP, estou entrando em contato sobre o seu evento de '+tipo+d+'.\nPosso te ajudar com mais informações?'),'_blank');
+function openWA(id){
+  const l=leads.find(x=>x.id===id);if(!l||!l.wa)return;
+  const num=l.wa.replace(/\D/g,'');
+  const full=num.startsWith('55')?num:'55'+num;
+  const d=l.data?' marcado para '+fmtD(l.data):'';
+  const msg='Olá '+l.nome+'! 😊\nSou do Espaço VIP, estou entrando em contato sobre o seu evento de '+l.tipo+d+'.\nPosso te ajudar com mais informações?';
+  window.open('https://wa.me/'+full+'?text='+encodeURIComponent(msg),'_blank');
+}
+function abrirCalendar(id){
+  const l=leads.find(x=>x.id===id);if(!l)return;
+  const url=gcalUrl(l);if(!url)return;
+  window.open(url,'_blank');
 }
 async function deleteLead(id){
   if(!confirm('Remover este cliente?'))return;
@@ -1212,7 +1220,7 @@ function renderCalendar(){
   document.getElementById('cal-grid').innerHTML=html;
   const evList=document.getElementById('cal-ev-list');const todosMes=[...Object.values(byDay).flat().filter(l=>l.status==='Confirmado'||l.status==='Realizado'),...Object.values(byDay).flat().filter(l=>l.status==='Lead')].sort((a,b)=>a.data.localeCompare(b.data));
   if(!todosMes.length){evList.innerHTML='<div style="color:var(--muted);font-size:12px">Nenhum evento</div>';}
-  else{evList.innerHTML=todosMes.map(l=>{const mod=l.modalidade||'Buffet';const url=gcalUrl(l);const cor=l.status==='Lead'?'var(--gold-dark)':mod==='Locação'?'var(--purple)':'var(--orange)';const bg=l.status==='Lead'?'var(--gold-light)':mod==='Locação'?'var(--purple-light)':'var(--orange-light)';return`<div class="cal-ev-item"><div class="cal-ev-date" style="background:${bg};color:${cor}">${l.data.split('-')[2]}${l.hora?'<div style="font-size:9px">'+l.hora+'</div>':''}</div><div class="cal-ev-info"><div class="cal-ev-name">${l.nome||''}</div><div class="cal-ev-sub">${l.tipo} · ${modLabel(mod)}</div></div><span class="status-badge ${sbCls(l.status)}" style="font-size:9px">${l.status}</span>${url?`<button class="abtn btn-gcal" style="font-size:10px;padding:3px 7px" onclick="window.open(${JSON.stringify(url)},'_blank')">📅</button>`:''}</div>`;}).join('');}
+  else{evList.innerHTML=todosMes.map(l=>{const mod=l.modalidade||'Buffet';const url=gcalUrl(l);const cor=l.status==='Lead'?'var(--gold-dark)':mod==='Locação'?'var(--purple)':'var(--orange)';const bg=l.status==='Lead'?'var(--gold-light)':mod==='Locação'?'var(--purple-light)':'var(--orange-light)';return`<div class="cal-ev-item"><div class="cal-ev-date" style="background:${bg};color:${cor}">${l.data.split('-')[2]}${l.hora?'<div style="font-size:9px">'+l.hora+'</div>':''}</div><div class="cal-ev-info"><div class="cal-ev-name">${l.nome||''}</div><div class="cal-ev-sub">${l.tipo} · ${modLabel(mod)}</div></div><span class="status-badge ${sbCls(l.status)}" style="font-size:9px">${l.status}</span>${url?`<button class="abtn btn-gcal" style="font-size:10px;padding:3px 7px" onclick="abrirCalendar('${l.id}')">📅</button>`:''}</div>`;}).join('');}
   const freeList=document.getElementById('cal-free-list');const diasNomes=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
   if(!diasLivres.length){freeList.innerHTML='<div style="color:var(--muted);font-size:12px">Nenhum dia livre</div>';}
   else{freeList.innerHTML=diasLivres.slice(0,10).map(d=>{const dt=new Date(calY,calM,d);return`<div class="cal-free-item">${diasNomes[dt.getDay()]}, ${String(d).padStart(2,'0')}/${String(calM+1).padStart(2,'0')}</div>`;}).join('')+(diasLivres.length>10?`<div style="font-size:11px;color:var(--muted);margin-top:4px">+${diasLivres.length-10} outros</div>`:'')}
